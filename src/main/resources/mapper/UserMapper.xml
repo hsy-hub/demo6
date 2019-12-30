@@ -1,0 +1,17 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <select id="selectByid" resultType="user" parameterType="Integer">
+        select * from user where id=#{id}
+    </select>
+
+    <update id="updateUserByid" parameterType="user">
+        update user set loginName=#{loginName}
+    </update>
+
+    <delete id="deleteUserByid" parameterType="Integer">
+        delete from user where id=#{id}
+    </delete>
+</mapper>
